@@ -10,7 +10,7 @@ import React, { useState } from 'react'
   }
  
         return (
-          <div className="app-header">
+          <div className="container app-header">
           <div className="app-header-left">
             <span className="app-icon"></span>
             <p className="app-name">Records API</p>

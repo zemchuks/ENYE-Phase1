@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <main id='main' className="page-footer blue">
+        <main id='main' className="page-footer" style={{ backgroundColor: '#1F1D2B', color: 'white' }}>
           <div className="container">
             <div className="row">
               <div className="col l6 s12">
