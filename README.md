@@ -1,7 +1,7 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/bd1f86f3-dfe1-4cc5-93a3-c6f06d0a5d8c/deploy-status)](https://app.netlify.com/sites/front-end-records-api-assesment/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/25be9a48-0aed-43be-8804-c5bb249dfeb8/deploy-status)](https://app.netlify.com/sites/enye-phase1/deploys)
 
 The Project was hosted on Netlify. 
-Demo can be found [HERE](https://front-end-records-api-assesment.netlify.app/)
+Demo can be found [HERE](https://enye-phase1.netlify.app/)
 
 ## Records API Front-End
 
