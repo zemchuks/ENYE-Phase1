@@ -54,10 +54,24 @@ const Records = ({ records, loading, filterByWhat, isFilter, onSelect, clearFilt
                                     <i className="material-icons right">clear</i>Clear Filter
                                 </button>
                                 <button className="view-btn list-view" title="List View" onClick={() => setIsActive('jsListView')}>
-                                <i className="fal fa-list-ul fa-2x"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+                                        strokeLinejoin="round" className="feather feather-list">
+                                        <line x1="8" y1="6" x2="21" y2="6" />
+                                        <line x1="8" y1="12" x2="21" y2="12" />
+                                        <line x1="8" y1="18" x2="21" y2="18" />
+                                        <line x1="3" y1="6" x2="3.01" y2="6" />
+                                        <line x1="3" y1="12" x2="3.01" y2="12" />
+                                        <line x1="3" y1="18" x2="3.01" y2="18" /></svg>
                                 </button>
-                                <button className="view-btn grid-view active" title="Grid View" onClick={() => setIsActive('jsGridgitView')}>
-                                <i className="fal fa-th-large fa-2x"></i>
+                                <button className="view-btn grid-view active" title="Grid View" onClick={() => setIsActive('jsGridView')}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+                                        strokeLinejoin="round" className="feather feather-grid">
+                                        <rect x="3" y="3" width="7" height="7" />
+                                        <rect x="14" y="3" width="7" height="7" />
+                                        <rect x="14" y="14" width="7" height="7" />
+                                        <rect x="3" y="14" width="7" height="7" /></svg>
                                 </button>
                             </div>
                         </div>
