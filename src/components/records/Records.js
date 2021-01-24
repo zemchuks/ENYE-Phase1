@@ -5,12 +5,7 @@ import { Fade } from 'react-animation-components';
 
 const Records = ({ records, loading, filterByWhat, isFilter, onSelect, clearFilter }) => {
 
-    const [isActive, setIsActive] = useState(false)
-
-    const listToggle = () => {
-        setIsActive(!isActive)
-    }
-   
+    const [isActive, setIsActive] = useState('jsGridView')
 
     if(loading) {
         return <Preloader />
@@ -58,16 +53,16 @@ const Records = ({ records, loading, filterByWhat, isFilter, onSelect, clearFilt
                                 <button onClick={() => clearFilter()} className="waves-effect waves-light blue hoverable btn-small">
                                     <i className="material-icons right">clear</i>Clear Filter
                                 </button>
-                                <button key={isActive} className="view-btn list-view" title="List View" onClick={listToggle}>
+                                <button className="view-btn list-view" title="List View" onClick={() => setIsActive('jsListView')}>
                                 <i className="fal fa-list-ul fa-2x"></i>
                                 </button>
-                                <button className="view-btn grid-view active" title="Grid View">
+                                <button className="view-btn grid-view active" title="Grid View" onClick={() => setIsActive('jsGridgitView')}>
                                 <i className="fal fa-th-large fa-2x"></i>
                                 </button>
                             </div>
                         </div>
 
-                        <div className="project-boxes jsGridView">
+                        <div className={`project-boxes ${isActive}`}>
                             {!loading && records.length === 0 ? (<h4 style={{ margin: '20px' }} className='center'>No records, sorry</h4>) : records.map((record, key) => (
                             <RecordItem key={key} record={record} isFilter={isFilter} filterByWhat={filterByWhat} />
                             ))}
