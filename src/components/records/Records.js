@@ -7,11 +7,6 @@ const Records = ({ records, loading, filterByWhat, isFilter, onSelect, clearFilt
 
     const [isActive, setIsActive] = useState('jsGridView')
 
-    const changeActive = () => {
-        document.documentElement.classList.add('view-btn.active')
-        setIsActive('jsListView')
-    }
-
     if(loading) {
         return <Preloader />
     } 
@@ -57,7 +52,7 @@ const Records = ({ records, loading, filterByWhat, isFilter, onSelect, clearFilt
                                 <button onClick={() => clearFilter()} className="waves-effect waves-light blue hoverable btn-small">
                                     <i className="material-icons right">clear</i>Clear Filter
                                 </button>
-                                <button className="view-btn list-view" title="List View" onClick={() => changeActive()}>
+                                <button className={`view-btn list-view ${isActive === 'jsListView' ? 'active' : ''}`} title="List View" onClick={() => setIsActive('jsListView')}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
                                         strokeLinejoin="round" className="feather feather-list">
@@ -68,7 +63,7 @@ const Records = ({ records, loading, filterByWhat, isFilter, onSelect, clearFilt
                                         <line x1="3" y1="12" x2="3.01" y2="12" />
                                         <line x1="3" y1="18" x2="3.01" y2="18" /></svg>
                                 </button>
-                                <button className="view-btn grid-view" title="Grid View" onClick={() => setIsActive('jsGridView')}>
+                                <button className={`view-btn grid-view ${isActive === 'jsGridView' ? 'active' : ''}`} title="Grid View" onClick={() => setIsActive('jsGridView')}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
                                         strokeLinejoin="round" className="feather feather-grid">
