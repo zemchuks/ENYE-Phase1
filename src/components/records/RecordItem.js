@@ -20,7 +20,7 @@ const RecordItem = ({ record, isFilter, filterByWhat }) => {
         if(isFilter) {
             return (
                 
-                <div className='project-box-wrapper hoverable'>
+                <div className='project-box-wrapper hoverbox'>
                     <div className="project-box" style={{backgroundColor: "#e3e7ef"}}>
                     <ul>
                         <li className='collection-item'>
@@ -38,7 +38,7 @@ const RecordItem = ({ record, isFilter, filterByWhat }) => {
         } else {
             return (
                 <Fragment>
-                    <div className="project-box-wrapper hoverable">
+                    <div className="project-box-wrapper hoverbox">
                         <div className="project-box" style={{backgroundColor: "#e3e7ef"}}>
                             <div className="project-box-header">
                                 <span>Details</span>

@@ -52,7 +52,6 @@
 
 body {
   font-family: "DM Sans", sans-serif;
-  overflow: auto;
 }
 
 button, a {
@@ -166,19 +165,6 @@ button, a {
   opacity: 0.6;
 }
 
-.add-btn {
-  color: #fff;
-  background-color: var(--button-bg);
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .profile-btn {
   padding: 0;
   border: 0;
@@ -227,14 +213,7 @@ button, a {
   justify-content: center;
   align-items: center;
 }
-.app-sidebar-link:hover {
-  background-color: var(--link-color-hover);
-  color: var(--link-color-active);
-}
-.app-sidebar-link.active {
-  background-color: var(--link-color-active-bg);
-  color: var(--link-color-active);
-}
+
 
 .projects-section {
   flex: 2;
@@ -275,35 +254,6 @@ button, a {
   display: flex;
 }
 
-.item-status {
-  display: flex;
-  flex-direction: column;
-  margin-right: 16px;
-}
-.item-status:not(:last-child) .status-type:after {
-  content: "";
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  transform: translatey(-50%);
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  border: 1px solid var(--secondary-color);
-}
-
-.status-number {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 700;
-  color: var(--main-color);
-}
-
-.status-type {
-  position: relative;
-  padding-right: 24px;
-  color: var(--secondary-color);
-}
 
 .view-actions {
   display: flex;
@@ -546,20 +496,6 @@ button, a {
   background-color: transparent;
   border: none;
   flex-shrink: 0;
-  /*&:after, &:before {
-    content: '';
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: var(--main-color);
-    opacity: .8;
-    left: 50%;
-    transform: translatex(-50%);
-  }
-
-  &:before { top: 0;}
-  &:after { bottom: 0; }*/
 }
 
 .more-wrapper {
@@ -837,6 +773,9 @@ button, a {
     right: 2px;
     top: 10px;
   }
+}
+.hoverbox:hover{
+  transform: translateY(-15px); 
 }
 .select-css {
   display: block;
