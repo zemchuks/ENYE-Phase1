@@ -19,7 +19,7 @@ const Pagination = ({ recordsPerPage, totalRecords, paginate }) => {
            <li className="disabled"><a href="#!"><i className="material-icons">chevron_left</i></a></li>
                {pageNumbers.map(number => (
                    <li key={number} style={{ marginLeft: '5px'}}>
-                       <button className={`${activePage === number && 'active blue lighten-2 hoverable'}`} onClick={() => handlePaginate(number)}>
+                       <button className={` btn white black-text ${activePage === number && 'active blue lighten-2 hoverable'}`} onClick={() => handlePaginate(number)}>
                          {number}
                        </button>
                    </li>
