@@ -476,7 +476,8 @@ button, a {
   max-width: 120px;
 }
 .project-boxes.jsListView .project-box-header {
-  order: 2;
+  order: 1;
+  display: none;
 }
 .project-boxes.jsListView .project-box-footer {
   order: 3;
@@ -487,9 +488,7 @@ button, a {
 .project-boxes.jsListView .project-box-footer:after {
   display: none;
 }
-.project-boxes.jsListView .participants {
-  margin-bottom: 8px;
-}
+
 .project-boxes.jsListView .project-box-content-header p {
   text-align: left;
   overflow: hidden;
@@ -821,14 +820,6 @@ button, a {
   }
 
   .project-boxes.jsListView .project-box-header > span {
-    font-size: 10px;
-  }
-
-  .box-progress-header {
-    font-size: 12px;
-  }
-
-  .box-progress-percentage {
     font-size: 10px;
   }
 

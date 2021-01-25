@@ -21,7 +21,7 @@ const RecordItem = ({ record, isFilter, filterByWhat }) => {
             return (
                 
                 <div className='project-box-wrapper hoverable'>
-                    <div className="project-box" style={{backgroundColor: "#F3F6FD"}}>
+                    <div className="project-box" style={{backgroundColor: "#e3e7ef"}}>
                     <ul>
                         <li className='collection-item'>
                             <span className='grey-text'>
@@ -39,7 +39,7 @@ const RecordItem = ({ record, isFilter, filterByWhat }) => {
             return (
                 <Fragment>
                     <div className="project-box-wrapper hoverable">
-                        <div className="project-box" style={{backgroundColor: "#F3F6FD"}}>
+                        <div className="project-box" style={{backgroundColor: "#e3e7ef"}}>
                             <div className="project-box-header">
                                 <span>Details</span>
                             </div>
@@ -67,7 +67,7 @@ const RecordItem = ({ record, isFilter, filterByWhat }) => {
                             </ul>
                             
                                 
-                                <div className="days-left" style={{color: "#ff942e", cursor: 'pointer'}} onClick={handleHide}>
+                                <div className="days-left more-wrapper" style={{color: "#ff942e", cursor: 'pointer'}} onClick={handleHide}>
                                    See more
                                 </div>
                         </div>

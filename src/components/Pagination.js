@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const Pagination = ({ recordsPerPage, totalRecords, paginate }) => {
-    const [activePage, setActivePage] = useState(0);
+    const [activePage, setActivePage] = useState(false);
     // Page numbers should be empty at first
     const pageNumbers = []
 
@@ -16,15 +16,15 @@ const Pagination = ({ recordsPerPage, totalRecords, paginate }) => {
     return (
         
         <ul className='pagination center'>
-           <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+           <li className="disabled"><a href="#!"><i className="material-icons">chevron_left</i></a></li>
                {pageNumbers.map(number => (
                    <li key={number} style={{ marginLeft: '5px'}}>
-                       <button className={activePage === number && 'active blue lighten-2 hoverable'} onClick={() => handlePaginate(number)}>
+                       <button className={`${activePage === number && 'active blue lighten-2 hoverable'}`} onClick={() => handlePaginate(number)}>
                          {number}
                        </button>
                    </li>
                ))}
-            <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+            <li className="waves-effect"><a href="#!"><i className="material-icons">chevron_right</i></a></li>
 
             
         </ul> 
