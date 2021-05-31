@@ -22,14 +22,15 @@ const App = () => {
       M.AutoInit()
         const fetchRecords = async () => {
           setLoading(true)
-          const res = await fetch('https://api.enye.tech/v1/challenge/records')
+          const res = await fetch('./db.json')
           const data  = await res.json();
-          setRecords(data.records.profiles)
+          console.log(data);
+          setRecords(data.records)
           setLoading(false)
           
-        } 
+        }
       fetchRecords()
-     
+    
       // eslint-disable-next-line
     }, []) 
 
@@ -58,8 +59,7 @@ const App = () => {
       <Fragment>
          <div className='app-container'>
           <SearchBar onSearch={onSearch}  />
-
-        
+ 
         
         <Records records={currentRecords} loading={loading} filterByWhat={filterByWhat} isFilter={isFilter}  clearFilter={clearFilter} onSelect={onSelect}  />
         <Pagination recordsPerPage={recordsPerPage} totalRecords={records.length} paginate={paginate} />
