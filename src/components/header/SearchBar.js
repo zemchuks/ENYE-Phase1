@@ -29,7 +29,7 @@ import React, { useState } from 'react'
             
             <button className="profile-btn">
               <img src="images/bruno2.jpg" alt='profile-img' />
-              <span>Austin B.</span>
+              <span>Benson M.</span>
             </button>
           </div>
           
